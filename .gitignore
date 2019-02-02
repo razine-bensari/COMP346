@@ -1,0 +1,5 @@
+#Ignore directory from IDE
+.idea/
+
+#Ignore file from IDE
+*.iml

@@ -8,7 +8,6 @@
  * $Revision: 1.0 $
  * $Last Revision Date: 2019/01/06
  */
-
 public class AccountManager {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - AccountManager",
+            "request": "launch",
+            "mainClass": "AccountManager",
+            "projectName": "AccountExperiment_f6aff818"
+        }
+    ]
+}

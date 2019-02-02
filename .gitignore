@@ -1,5 +1,5 @@
 #Ignore directory from IDE
 .idea/
-
+.vscode/
 #Ignore file from IDE
 *.iml

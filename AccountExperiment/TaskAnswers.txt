@@ -1,0 +1,8 @@
+Task 1: Atomicity Bug Hunt
+
+Compile and run the Java app given to you as it is. Explain why the main requirement
+above (i.e. consistent state of the account array) is not met. What atomicity problem does
+it pose? Find the bug that causes it. In no more than three sentences, explain what went
+wrong.
+
+- 

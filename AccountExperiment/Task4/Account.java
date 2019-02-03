@@ -147,9 +147,9 @@ public class Account {
 		double k = 999999999;
 		for(int i=0;i<100;i++)
 			k = k / 2;
-
-			balance = balance + amount;
-
+			synchronized(this){
+				balance = balance + amount;
+			}
 		// Waste some time doing fake computations
 		// do not remove or modify any of the following 3 statements
 		k = 999999999;
@@ -169,9 +169,9 @@ public class Account {
 		double k = 999999999;
 		for(int i=0;i<100;i++)
 			k = k / 2;
-
-			balance = balance - amount;
-
+			synchronized(this){
+				balance = balance - amount;
+			}
 		// Waste some time doing fake computations
 		// do not remove or modify any of the following 3 statements
 		k = 999999999;

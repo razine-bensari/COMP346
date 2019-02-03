@@ -22,9 +22,7 @@ public class Withdrawer extends Thread {
 		
 			for (int i=0;i<10000000;i++)
 			{
-				synchronized(this.account){
 				account.withdraw(10);
-				}
 			}		
 	}
 

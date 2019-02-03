@@ -19,9 +19,7 @@ public class Depositor extends Thread {
 	public void run(){
 			for (int i=0;i<10000000;i++)
 			{
-				synchronized(this.account){
-					account.deposit(10);
-				}
+				account.deposit(10);
 			}	
 		
 	}

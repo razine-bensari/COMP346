@@ -51,4 +51,18 @@ Create a package and name it task4 then copy the java files from task 3 into tha
 package. Use synchronized technology (block level synchronization) in order to improve
 the solution to the problem at hand.
 
-- 
+- I made the synchronized block surrounding the balance = balance -&+ ammount.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Task 5: synchronized block vs synchronized method
+
+Considering the results of task 3 and task 4, what is the advantage of synchronized block
+over synchronized method?
+
+- Based on the result obtained, there is not much difference. Both timings seems to vary between 1.3 seconds to 1.48 seconds.
+Both type of synchronization fall in that range. If I were to pronounce myself without basing the answer on the result. I would say
+that synchronzized block is better in terms of performance (speed). The reason being that a synchronized block is applied around
+the critical section only. which allows other thread to still execute part of the method instead of waiting for the whole method to
+finish executing. It locks only the memory used inside the block instead of the whole method. However, in my case, this was not reflected
+properly in terms of speed.

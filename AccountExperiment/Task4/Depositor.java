@@ -17,19 +17,12 @@ public class Depositor extends Thread {
 	}
 	
 	public void run(){
-		synchronized(this.account){
 			for (int i=0;i<10000000;i++)
 			{
-				account.deposit(10);
-			/*			
-			try {
-					sleep(10);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}*/
-			}
-		}
-		
+				synchronized(this.account){
+					account.deposit(10);
+				}
+			}	
 		
 	}
 

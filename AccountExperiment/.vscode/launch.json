@@ -4,6 +4,13 @@
             "type": "java",
             "name": "CodeLens (Launch) - AccountManager",
             "request": "launch",
+            "mainClass": "Task4.AccountManager",
+            "projectName": "AccountExperiment_f6aff818"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - AccountManager",
+            "request": "launch",
             "mainClass": "Task3.AccountManager",
             "projectName": "AccountExperiment_f6aff818"
         },

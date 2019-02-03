@@ -39,4 +39,16 @@ Create a package and name it task3 and copy the provided java files into that ne
 package. Use synchronized technology (method level synchronization) in order to
 introduce a solution to the problem at hand.
 
- 
+ - I made the method Account.deposit()   and Account.withdraw synchronized.
+The reason being that these two methods are being used by the threads
+and it allows for each thread to not be interrupted while using the critical source
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Task 4: Block level synchronization
+
+Create a package and name it task4 then copy the java files from task 3 into that new
+package. Use synchronized technology (block level synchronization) in order to improve
+the solution to the problem at hand.
+
+- 

@@ -1,3 +1,4 @@
+----------------------------------------------------------------------------------------------------------------------------------------------
 Task 1: Atomicity Bug Hunt
 
 Compile and run the Java app given to you as it is. Explain why the main requirement
@@ -5,4 +6,37 @@ above (i.e. consistent state of the account array) is not met. What atomicity pr
 it pose? Find the bug that causes it. In no more than three sentences, explain what went
 wrong.
 
-- 
+- The reason why the consistent state of the array is not met is due to the different threads accessing the array.
+In each account (out of the 20 account) there is always two threads accessing the balance of this account. One thread is responsible
+for depositing an extra 10$ in the balance ammout, the other thread to remove 10$ in the balance ammount. The issue occurs when both
+threads need to access this specific resource (account balance). Both threads will interrupt each other while executing the deposit()
+or withdraw() method. This is what leads to inconsistent account balance.
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+Task 2: Starting Order
+
+Explain, in about one sentence, what determines the start order of the threads. Also, very
+briefly, explain the lifetime of a thread: its creation, execution, and termination.
+Experiment with the start order of any of the threads. Is the consistency of the accounts
+preserved?
+
+- I understood the first question in two different way. I will attempt to answer in both ways as I do not know what is meant exactly
+BASED ON GOOGLE: It is up to the OS (thread scheduler) that initiate the thread. They are all given priority (which is translated to CPU time)
+to be executed. For example, thread_2 may be called after thread_1 but may still be terminated before because it has higher priority.
+thread_1 will start executing then thread_2 will start and be given more CPU time (due to its priority) and therefore finish before thread_1
+even though it has been called later. So it is essentially the OS that decides on the order of thread.
+
+The second understanding I got from this question is that the starts of thread is "initiated" when the code reaches the THREAD.start()
+instruction.
+
+A thread is created when the .start() method is called from a thread object. Its execution happen concurrently with other threads.
+The thread execute the instruction inside of its .run() method. The thread is terminated when it comes out of the .run() method.
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+Task 3: Method level synchronization
+
+Create a package and name it task3 and copy the provided java files into that new
+package. Use synchronized technology (method level synchronization) in order to
+introduce a solution to the problem at hand.
+
+ 
